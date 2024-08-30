@@ -11,6 +11,8 @@ La página es responsiva (adaptable a diferentes tamaños de pantalla).
 ## Secciones de mi sitio
 ![Página principal](assets/pp.png)
 
+![Catálogo de productos](assets/CadP.png)
+
 ![Producto 1](assets/vn.png)
 
 ![Producto 2](assets/abr.png)

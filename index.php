@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demure</title>
+    <title>DEMURE> </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -298,19 +300,22 @@
         </section>
 
         <div>
-        <h1>Catálogo de Productos</h1>
-    <div class="catalogo">
-        <?php foreach ($productos as $producto) : ?>
-            <div class="producto">
-                <h2><?php echo $producto['nombre']; ?></h2>
-                <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
-                <p><?php echo $producto['descripcion']; ?></p>
-                <p>Precio: $<?php echo $producto['precio']; ?></p>
-                <a href="<?php echo $producto['enlace']; ?>">Ver más</a>
-            </div>
-        <?php endforeach; ?>
-    </div>
+    <h1>Catálogo de Productos</h1>
 
+    <?php include 'catalogo.php'; ?>
+
+    <ul>
+    <?php foreach ($productos as $producto): ?>
+        <li>
+            <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>" width="200" height="300">
+            <h2><?php echo $producto['nombre']; ?></h2>
+            <p><?php echo $producto['descripcion']; ?></p>
+            <p>Precio: $<?php echo number_format($producto['precio'], 2); ?></p>
+            <a href="<?php echo $producto['enlace']; ?>">Ver más</a>
+        </li>
+    <?php endforeach; ?>
+</ul>
+</div>
 
 
     </main>
